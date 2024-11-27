@@ -1,0 +1,10 @@
+.innertext h1{
+    font-size: 80px;
+    font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.innertext p{
+    font-size: 35px;
+}
