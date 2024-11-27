@@ -18,15 +18,23 @@ var quoteObjectFour = {
     auther : `Mark Twain`
 }; 
 
-var quotes = [quoteObjectOne , quoteObjectTwo ,  quoteObjectThree , quoteObjectFour] ;
+var quoteObjectFive = {
+    quote : `It is better to be hated for what you are than to be loved for what you are not` ,
+    auther : `Andre Gide, Autumn Leaves`
+}; 
+var quotes = [quoteObjectOne , quoteObjectTwo ,  quoteObjectThree , quoteObjectFour , quoteObjectFive] ;
 
-var cartona = ''; 
+var lastNumber = 0; 
 
 function generateQuotes() {
-  var number = Math.floor(Math.random() * quotes.length);
+    var number =  0 ;
+    do {
+        number = Math.floor(Math.random() * quotes.length);
+    } while (number === lastNumber);
   document.getElementById('genQuote').innerHTML = `<p> ${quotes[number].quote} </p>
   <p> ${quotes[number].auther} 
   </p> `
+  lastNumber = number; 
 };
 
 
